@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vanessa GSEA Update Page</title>
+        <script type="text/javascript" src="js/d3.v3.js"></script>
+        <script type="text/javascript" src="js/tipsy.js"></script>
+
+        <!-- Bootstrap for Styling -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Custom Styling -->
+        <style type="text/css">
+
+            text {
+                font-family: sans-serif;
+                font-size: 12px;
+                fill: white;
+            }
+
+            body {
+                padding-top: 20px;
+            }
+
+            h1 {
+                color: #666;
+
+            }
+            h6 {
+                color: #fff;
+            }
+            .boxes {
+                text-align: center;
+                color: #fff;
+                margin-top:30px;
+                font-weight: bold;
+                padding-top:5px;
+                padding-bottom:5px;
+            }
+            .done {
+                background: #0066FF;
+            }
+            .notdone {
+                background: orange;
+            }
+
+            .container {
+                margin-left: 80px;
+            }
+
+            .d3-tip {
+              line-height: 1;
+              font-weight: bold;
+              padding: 12px;
+              background: rgba(0, 0, 0, 0.8);
+              color: #fff;
+              border-radius: 2px;
+            }
+
+            /* Creates a small triangle extender for the tooltip */
+            .d3-tip:after {
+              box-sizing: border-box;
+              display: inline;
+              font-size: 10px;
+              width: 100%;
+              line-height: 1;
+              color: rgba(0, 0, 0, 0.8);
+              content: "\25BC";
+              position: absolute;
+              text-align: center;
+            }
+
+            /* Style northward tooltips differently */
+            .d3-tip.n:after {
+              margin: -1px 0 0 0;
+              top: 100%;
+              left: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <h1>Vanessa's GSEA Progress</h1>
+                <script type="text/javascript">
+
+
+                // Set height and width
+                h = 500;
+                w = 1200;
+
+                // Create canvas
+                svg = d3.select("body")
+                    .append("svg")
+                    .attr("height",h)
+                    .attr("width",w)
+           
+                // This is a function for tooltips
+                var tip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function(d) {
+                        return "<strong>ID:</strong><span style='color:tomato'>" + d.DATASET + "</span><br><strong>disorder:</strong><span style='color:yellow'>" + d.FULLNAME + "</span><br><strong>chip:</strong><span style='color:orange'>" + d.CHIP + "</span><br><strong>size:</strong><span style='color:cornflowerBlue'>" + d.GENES + " by " + d.ORIGINAL_N + "</span>";
+                    })
+
+                // Call tooltips function
+                svg.call(tip);
+
+
+                // Read in tsv file to "data"
+                d3.tsv("data/data.tsv", function(error,data) {
+                    data.forEach(function(d) {
+                        //console.log(d);
+                    })
+                    // Return any errors
+                    if(error){
+                        return console.log(error);
+                    }
+
+                
+                    // Create a circle for each data element
+                    svg.selectAll("circle")
+                        .data(data)
+                        .enter()
+                        .append("svg:a")
+                            .attr("xlink:href", function(d){return "http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=" + d.DATASET;})
+                        .append("svg:circle")
+                        .attr()
+                        .attr("cy",function(d,i){ return 30*d.Y })
+                        .attr("cx",function(d,i){ return 30*d.X })
+                        .attr("r", 10)
+                        .attr("fill","yellow")
+                        .attr("stroke",function(d) {if (d.PROCESS == "DONE") {return "#0066FF"} else   { return "orange" } ;}) 
+                        .attr("stroke-width",10)
+                        .attr("transform","translate(60,40)")
+                        .on('mouseout.tip', tip.hide)
+                        .on('mouseover.tip', tip.show)
+                        .on('mouseover.color', function(d) {
+                            d3.select(this).style("fill", "red");
+                        })
+                        .on('mouseover.size', function(d) {
+                            d3.select(this).attr("r", 15);
+                        })
+                        .on('mouseout.size', function(d) {
+                            d3.select(this).attr("r", 10);
+                        })
+
+                        .transition()
+                        .attr("x",10)
+
+                    }); // End of file
+                   
+                </script>
+            </div><!-- End row -->
+
+            <!-- Here is the color lookup table -->
+            <div class="row">
+              <div class="col-md-2 done boxes">DONE</div>
+              <div class="col-md-2 notdone boxes">NOT DONE</div>
+            </div> <!-- End row -->
+        </div><!-- End container -->
+    </body>
+</html>

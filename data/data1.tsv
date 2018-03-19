@@ -1,0 +1,357 @@
+FULLNAME	DATASET	READY_FOR_GSEA	NORMALIZATION	GENES	ORIGINAL_N	CHIP	PROCESS	X	Y
+Schizophrenia	GSE53987	OK	R/Bioconductor was used to apply the Robust Multi-Array Average (RMA) methodology to generate expression values.  Brain regions were normalized separately. 			GLP570	DONE	1	1
+Schizophrenia	GSE12649	quantile normalized	The data were normalized by median centering by GeneSpring software (Agilent) 	22283	102	GPL96	DONE	1	2
+Schizophrenia	GSE12654	quantile normalized	The data were normalized by median centering by GeneSpring software (Agilent) 	12625	50	GPL8300	DONE	1	3
+Schizophrenia	GSE12679	OK	Expression measures were computed for each of the probesets on each of the GeneChips in the dataset using the robust multichip average (RMA) method, which is implemented in the BioConductor package ‘Affy’. RNA digestion plots were also generated using Affy package. A linear regression of expression values on the logarithm (base 2) of slope of the RNA digestion plots for each probeset was performed and the residuals from the regression were assigned as expression values for further analysis.	54675	32	GLP570	DONE	1	4
+Schizophrenia	GSE17612	OK	The data were analyzed with Microarray Suite version 5.0 (MAS 5.0) using Affymetrix default analysis settings and global scaling as normalization method. The trimmed mean target intensity of each array was arbitrarily set to 150.	33297	24	GPL570	DONE	1	5
+Schizophrenia	GSE25673	OK	Data in the sample data tables are rma background corrected, quantile normalized, log2 transformed and mean probeset summarized. Further processed data on the Series record were performed by Partek Genomics Suite.	33297	24	GPL6244	DONE	1	6
+Schizophrenia	GSE46509	quantile normalized	GCOS v1.3	61359	16	GPL1352	DONE	1	7
+Schizophrenia	GSE38485	OK	Data were backgroundcorrected in Beadstudio (v.3.2.3) and transformed (vst) and normalised (rsn) in Lumi (R package)	24526	37	GPL6883	DONE	1	8
+Schizophrenia	GSE38485	OK	Data were backgroundcorrected in Beadstudio (v. 3.2.3) and transformed (vst) and normalised (rsn) in Lumi (R package)	48743	202	GPL6947	DONE	1	9
+Schizophrenia	GSE27383	OK	Raw intensities values of all samples were normalized by RMA normalization (Robust Multichip Analysis) (background correction and quantile normalization) using Partek version 6.4 (Partek Inc., St. Louis, MO). To visualize the clustering of the samples, PCA (Principal Component Analysis) was used. The normalized datafile was transposed and imported into OmniViz version 6.0.1 (Biowisdom, Ltd., Cambridge, UK) for further analysis.  A06 and A18 were excluded due to outlying global signal intensities.	54675	72	GPL570	DONE	1	10
+Schizophrenia	GSE37981	quantile normalized	Each array was scanned twice and the Affymetrix Microarray Suite 5.1 software averaged the two images to compute an intensity value for each probe cell within each probe set. For the quality control step, we employed the dChip and Partek® software’s built-in function (Copyright, Partek Inc., St. Louis, MO). We then normalized all data with Partek’s standard normalization method (i.e. data has a mean of zero and a variance of one, and each column for each sample was divided by the average of all control samples). After a principal component analysis revealed the contribution of batch effect (scan date) to the observed variance, an Analysis of Covariance (ANCOVA) was performed with diagnosis and batch effect as covariates and the false discovery rate set at 10%. Differentially expressed genes were visualized by performing unsupervised hierarchical clustering as stringency of the filtering criteria (i.e. fold-change and p-value) was being varied to determine a representative gene list for pathway analyses. We employed three approaches to explore the biological significance of our expression data. First, differentially expressed genes were manually grouped to elucidate gene families that appeared to be dysregulated in schizophrenia. Second, pathway analyses were performed with two web-based algorithms, Ingenuity Pathway Analysis (Ingenuity® Systems) and MetaCore from GeneGo Inc. to map the differentially expressed genes onto biological functions and canonical pathways. With Ingenuity, the significance for each of the identified pathways was determined via a Fisher’s exact test, whereas GeneGo makes use of their algorithm for hypergeometric distribution, identifying pathways overrepresented with significant genes. Third, literature mining was performed to elucidate which of these pathways or gene families might be particularly pertinent for pyramidal neuronal functions and dendritic/synaptic architecture and plasticity. We also made note of differentially expressed genes that have been implicated as schizophrenia risk genes.	61359	18	GPL1352	DONE	2	1
+Schizophrenia	GSE35978	Not able to find chip, but OK	The data were analyzed by RMA using Affymetrix Expression Console with default analysis settings.	33297	312	GPL6244	DONE	2	2
+Schizophrenia	GSE26927	quantile normalized	The data was extracted using BeadStudio 3.2 (Illumina). Data normalisation and gene differential expression analyses were conducted using the Rosetta error models available in the Rosetta Resolver® system v7.0 (Rosetta Biosoftware, Seattle, Wa, USA).	20589	118	GPL6255	DONE	2	3
+Schizophrenia	GSE21138	OK	RNA expression data from schizophrenic subjects and their matched controls were normalized using dChip (DNA-Chip Analyzer), a statistical model for the probe-level data which gives model-based estimates for gene expression indices (Li and Hung Wong 2001) and subjected to a batch adjustment normalization to allow for comparisons among all three cohorts (Johnson et al., 2007).  Data were filtered to exclude those transcripts that were not present in at least one of the RNA samples, those with redundant probeset IDs (retaining those with the highest p-value for hybridization) and those showing the lowest variation; a list of 14,438 probesets remained for statistical testing. Sample data tables include only probesets that gave a "Present" call in at least one sample.	30061	59	GPL570	DONE	2	4
+Post traumatic stress disorder	GSE860	quantile normalized	NO INFORMATION	12600	33	GPL91	DONE	2	5
+Post traumatic stress disorder	GSE42002	looks ok on MA plot	Microarray expression analysis was performed in R, using beadarray (providing routines to handle Illumina BeadStudio data) , limma (for statistical routines) and vsn (for normalization) packages. Raw microarray scan files were exported using the Illumina Beadstudio program and loaded into R for downstream analysis. The data were transformed and normalized using the variance stabilizing normalization method.	48733	129	GPL6947	DONE	2	6
+Bipolar Disorder	GSE5388	quantile normalized	The raw data (CEL files) were read into R statistical package and normalised using the robust multi-chip average (RMA) method (Irizarray et al, 'Exploration, normalization and summaries of high density oligonucleotide array probe level data', Biostatistics, 2003).	22283	61	GPL96	DONE	2	7
+Bipolar Disorder	GSE7036	OK	Relative expression values were generated for each transcript using the Affymetrix MAS5.0 algorithm in GeneChip® Operating Software (GCOS) Version 1.2, with the average intensity of all transcripts on each array scaled to 150 so that the same target signal across all arrays could be compared	54675	6	GPL570	DONE	2	8
+Bipolar Disorder	GSE11767	OK	Relative expression values were generated for each transcript using the Affymetrix MAS5.0 algorithm in GeneChip® Operating Software (GCOS) Version 1.2, with the average intensity of all transcripts on each array scaled to 150 so that the same target signal across all arrays could be compared	22277	8	GPL571	DONE	2	9
+Bipolar Disorder	GSE23848	OK	The data were normalised using quantile normalisation with IlluminaGUI in R	48701	35	GPL6106	DONE	2	10
+Bipolar Disorder	GSE46449	quantile normalized	The data were analyzed using  BRB-Array Tools versions: 3.8.1 (as described in the manuscript) and 4.2.1 (the processed matrix GEO data).  Cell files were imported into the BRBArray Tools package, and converted to normalized intensity values using the Almost RMA (aRMA) algorithm.  A total of 199 cel files were imported into the project, including expression data obtained from patients with other psychiatric disorders.  Normalized intensity values reflect the a-RMA parameters employed across the entire sample dataset.   Analyses were performed on the sub-set of samples relevent to the study hypothesis.  	54675	88	GPL570	DONE	3	1
+Alzheimer's	GSE29378		The data were normalised using quantile normalisation with normalize.quantiles() in R				DONE	3	2
+Alzheimer's	GSE28146	OK	The data were analyzed with Expression Console version 1.1 (MAS 5.0) using Affymetrix default analysis settings and global scaling as normalization method. The trimmed mean target intensity of each array was arbitrarily set to 500. 	54675	30	GPL570	DONE	3	3
+Alzheimer's	GSE18309	quantile normalized	Gene expression analysis software was used for data analyses of differential expression profiles and RMA was used for normalization (GeneSpring GX software, version 7.3, Agilent Technologies, USA).	54675	9	GPL570	DONE	3	4
+Alzheimer's	GSE16759	OK	R/Bioconductor, RMA normalization	54675	8	GPL570	DONE	3	5
+Alzheimer's	GSE15222	quantile normalized	RNA: Beadstudio software v 1.5.0.34, rank invariant normalization to extract ...	24354	363	GPL2700	DONE	3	6
+Alzheimer's	GSE12685	quantile normalized	Model-Based Expression Index (dChip) (Li and Wong, 2001) implemented in Bioconductor, was used for signal normalization within an individual chip and across all samples. For high-level analysis, statistics tests were conducted to find significantly expressed genes, and this small set of genes was applied for clustering and pathway analysis. Probe sets that were differentially expressed among control and IAD were identified using ANOVA. Benjamini and Hochberg’s False Discovery Rate (FDR) was used for adjusting for multiple testing. The genes with significant change in expression were subject to  hierarchical clustering using dChip. ...	22283	14	GPL96	DONE	3	7
+Alzheimer's	GSE1297	quantile normalized	No detail	22283	31	GPL96	DONE	3	8
+Alzheimer's	GSE5281	quantile normalized	MAS5.0; target scaling to 15	54675	161	GPL570	DONE	3	9
+Alzheimer's	GSE4757	OK	No detail	54675	20	GPL570	DONE	3	10
+Autism Spectrum Disorder	GSE6575	OK	Levels: Raw data values were imported into GENESPRING 7.2 software (Agilent Technologies, Palo Alto, CA) and processed using GC-RMA, followed by normalization. A three-step normalization procedure was applied to raw expression values (Genespring 2004). First, values less than 0.01 were set to 0.01 (data transformation). Second, per chip normalization was performed by dividing each measurement by the 50.0th percentile of all measurements in that sample. Third, each gene was divided by the median of its measurements in all samples (per gene normalization).	54675	56	GPL570	DONE	4	1
+Autism Spectrum Disorder	GSE7329	OK	Scanner output image file was normalized and filtered using Feature Extraction Software ver 8.5. Normalization was performed so that overall intensity ratio of Cy5 to Cy3 was equal to one.	43931	30	GPL1708	DONE	4	2
+Autism Spectrum Disorder	GSE18123	visually checked with MA plot	The data were analyzed with umethod using Affymetrix Power Tools version 1.10.	54613	99	GPL570	DONE	4	3
+Autism Spectrum Disorder	GSE18123	visually checked with MA plot	The data were analyzed with Probe Logarithmic Intensity Error (PLIER) estimation method using Affymetrix Power Tools version 1.10.	33297	186	GPL6244	DONE	4	4
+Autism Spectrum Disorder	GSE25507	OK	RMA	54613	146	GPL570	DONE	4	5
+Autism Spectrum Disorder	GSE28475	normalized with quantila	data not normalized	12262	20	GPL13388	DONE	4	6
+Autism Spectrum Disorder	GSE28475	normalized with quantila	data not normalized	24526	123	GPL6883	DONE	4	7
+Autism Spectrum Disorder	GSE28521	OK	Log2 transformation and Quantile normalization using the R Lumi package.	10793	79	GPL6883	DONE	4	8
+Autism Spectrum Disorder	GSE37772	OK	Outlier samples were first removed followed by quantile normalisation and combat. All data processing steps were done in R (version 2.14.2).	24526	439	GPL6883	DONE	4	9
+Autism Spectrum Disorder	GSE39447	OK	The raw data (.pair file) was subjected to RMA (Robust Multi-Array Analysis; Irizarry et al. Biostatistics 4(2):249), quantile normalization (Bolstad et al. Bioinformatics 19(2):185), and background correction as implemented in the NimbleScan software package, version 2.4.27 (Roche NimbleGen, Inc.).	135096	39	GPL13635	DONE	4	10
+Autism Spectrum Disorder	GSE38322	OK	Levels: Data were normalized, variance-stabilized, and filtered for probes with detection p-values less than or equal to 0.01 in R using the lumi Bioconductor package	47323	36	GPL10558	DONE	5	1
+Borderline Personality Disorder	GSE52222	quantile normalized	was carried out by Life & Brain GmbH, Bonn	27579	36	GPL8490	DONE	5	2
+Down Syndrome	GSE5390	quantile normalized	The raw data (CEL files) were read into R statistical package and normalised using the robust multi-chip average (RMA) method (Irizarray et al, 'Exploration, normalization and summaries of high density oligonucleotide array probe level data', Biostatistics, 2003).	22283	15	GPL96	DONE	5	3
+Down Syndrome	GSE50586	quantile normalized	Raw intensities extracted using GenomeStudio v2010.1. Background normalization was conducted by subtracting averaged negative probe intensity from signal A and B. Then quantile normalization was done to control for chip to chip variation. Finally, average beta is recalculated from normalized intensities: methylated intensity / (methylated + unmethylated intensities). Data points with bad detection P values are removed and then imputed. One CpG site, cg22903370, was removed due to >50% of data points missing	48557	20	GPL13534	DONE	5	4
+Down Syndrome	GSE42114	OK	GCRMA (using gcrma package from R/Bioconductor)	54675	19	GPL570	DONE	5	5
+Down Syndrome	GSE42956	OK	For each probe, raw signal intensity was calculated using GenomeStudio software (Illumina). Normalization and statistical analysis of microarray data were performed in R using the Bioconductor packages Lumi and Limma.	47309	54	GPL10558	DONE	5	6
+Down Syndrome	GSE42772	OK	Quantile normalization, probe detection, fold-change comparison in R and Matlab	20589	16	GPL6255	DONE	5	7
+Down Syndrome	GSE16176	OK	Normalization was performed with the threestep command from the AffyPLM package in BioConductor, using ideal-mismatch background/signal adjustment, quantile normalization, and the Tukey biweight summary method.  Identification of individual differentially-expressed genes was performed via two-sided, paired t-tests using the multtest package in BioConductor, with the Benjamini-Hochberg adjustment for multiple testing. 	54675	14	GPL570	DONE	5	8
+Down Syndrome	GSE6283	OK	Call detection and signal intensities were generated by Affymetrix GCOS software. Raw data were imorted into ArrayAssist version 4.1 software. For normalization, GC-RMA normalization algorithm implemented in ArrayAssist were applied.	54675	21	GPL570	DONE	5	9
+Turner's Syndrome	GSE46687	quantile normalized	The data were extracted using the GeneChip Operating System 1.2 (Affymetrix).  An estimate of signal for each transcript was clculated using the Robust Multi-Array Average (RMA) using Expression Console Version 1.1 (Affymetrix) for normalization and background adjustment.	54675	36	GPL570	DONE	5	10
+Sleep Disorder	GSE48113	OK	Individual samples were filtered based on AgilentQC metrics of reproducibility statistics, minimum detection level estimates and feature flags. Samples with a median coefficient of variation of less than 10% in spike ins or non-control replicated probes (NCRPs) were retained and quantile-normalised using the R Bioconductor package limma. NCRPs along with their corresponding flags were averaged. Probes with more than 5 flagged samples within a subject in more than half of the total number of subjects were excluded. In addition, for time-series analyses, series with 2 consecutive or more than 2 missing time points were excluded.	43758	287	GPL15331	DONE	6	1
+Sleep Disorder	GSE49800	OK (needed to remove NA)	RMA algorithm with quantile normalization and background correction	33297	36	GPL6244	DONE	6	2
+Sleep Disorder	GSE38792	quantile normalized	Background adjustment and quantile normalization using the Robust Multichip Average algorithm  using Log2 transformed intensities.	33297	18	GPL6244	DONE	6	3
+Sleep Disorder	GSE37667	OK	Gene expression values were obtained using the three-step Robust Multi-array Average (RMA) pre-processing method (Irizarry et al., 2003), implemented in the Affymetrix Inc. package from R/Bioconductor. We applied the ComBat method prior to analysis for adjusting data for undesirable experimental variation (or batch effect) caused by different days in which the microarrays were processed. ComBat implements an empirical Bayes approach, that is commonly used in microarray analyses due to its ability to robustly handle high-dimensional data when sample sizes are small (Johnson et al, 2007).	54675	27	GPL570	DONE	6	4
+Sleep Disorder	GSE21592	OK	CEL files were imported using the default BRB Array tools normalization parameters.  Probe-level data were pre-processed, including background correction, normalization,  and summarization , using robust multi-array average (RMA) analysis; subsequent  data normalization was performed across all arrays using quantile normalization.	22277	20	GPL571	DONE	6	5
+Alcoholism	GSE53808	quantile normalized (separated motor and frontal cortex)	Data analysis was carried out using Broad Institute’s Gene Pattern (GP) analysis system hosted by the Peter Wills Bioinformatics Centre (PWBC) at the Garvan Institute of Medical Research, Sydney. All 40 samples passed quality control and the CEL files were combined into a ‘gct’ file using the GP ‘normalize affymetrix3’ module. Differential gene expression (DEG) was determined using Linear Models of Microarrays (Limma) (Smyth, 2004) implemented in the GP tool LimmaGP (Mark Cowley, unpublished data). The U219A array’s 49386 probes were collapsed down to 20260 expressed genes based on the most differentially expressed probe. Here p-values were adjusted for multiple comparisons using the false discovery rate method with a FDR q-value < 0.25 accepted as significant. DEG summarization was carried out using Gene Set Enrichment Analysis (GSEA)(Subramanian et al., 2005) with the molecular signature database (MSigDB) c2.all.v3.0. In addition we added alcohol-specific datasets from NCBI Gene Expression Omnibus (GEO):  GDS3703; GDS1660 and GDS2841. GSEA gene lists were ranked on normalized enrichment scores with FDR q-value < 0.05 considered significant.	49386	32	GPL1667	DONE	6	6
+Alcoholism	GSE49393	quantile normalized (separated motor and frontal cortex)	Data was normalized using controls normalization built-in GenomeStudio software V2011.1 (Methylation Module V1.9.0).	48557	48	GPL13534	DONE	6	7
+Alcoholism	GSE44456	quantile normalized (separated motor and frontal cortex)	Partek 6.3 was used to generate the RMA data, using the core probesets only option. This option generated the 'core' probesets as defined by Affymetrix as well-defined. This option generated 28,869 probe sets. Using the CEL files you may generate the rest, but these 28,869 probe sets were all that was used for the analysis.  RMA signals were generated for the core probe sets using the RMA background correction, Quantile normalization and summarization by Median Polish. Summarized signals for each probe set were log2 transformed. These are the standard defaults used in Partek.	28869	39	GPL6244	DONE	6	8
+Major Depressive Disorder	GSE12654	quantile normalized (separated motor and frontal cortex)	The data were normalized by median centering by GeneSpring software (Agilent).	12625	50	GPL8300	DONE	6	9
+Major Depressive Disorder	GSE54572	OK	Probeset signals (i.e., transcript levels) were extracted with the Affymetrix GCOS software. For statistical analysis, log2- transformed probeset signal intensities were extracted and normalized with the robust multiarray average (GC-RMA) algorithm	54675	24	GPL570	DONE	6	10
+Major Depressive Disorder	GSE54571	quantile normalized (separated motor and frontal cortex)	Probeset signals (i.e., transcript levels) were extracted with the Affymetrix GCOS software. For statistical analysis, log2- transformed probeset signal intensities were extracted and normalized with the robust multiarray average (GC-RMA) algorithm	54675	26	GPL570	DONE	7	1
+Major Depressive Disorder	GSE54570	OK	Probeset signals (i.e., transcript levels) were extracted with the Affymetrix GCOS software. For statistical analysis, log2- transformed probeset signal intensities were extracted and normalized with the robust multiarray average (GC-RMA) algorithm	22283	26	GPL96	DONE	7	2
+Major Depressive Disorder	GSE54575	OK	Probeset signals (i.e., transcript levels) were extracted with the Affymetrix GCOS software. For statistical analysis, log2- transformed probeset signal intensities were extracted and normalized with the robust multiarray average (GC-RMA) algorithm	22283	24	GPL96	DONE	7	3
+Major Depressive Disorder	GSE54568	OK	Probeset signals (i.e., transcript levels) were extracted with the Affymetrix GCOS software. For statistical analysis, log2- transformed probeset signal intensities were extracted and normalized with the robust multiarray average (GC-RMA) algorithm	54675	30	GPL570	DONE	7	4
+Fragile X	GSE48903	OK	Raw data was corrected for background noise using the normexp method. Quantile normalization was applied to assure comparability across samples.	62976	15	GPL13607	DONE	7	5
+Fragile X	GSE48873	OK	Raw data was corrected for background noise using the normexp method. Quantile normalization was applied to assure comparability across samples.	62976	15	GPL13607	DONE	7	6
+Fragile X	GSE41273	quantile normalized (separated motor and frontal cortex)	Raw signal intensities were quantile normalized separately and imputed values calculated for missing values (see unmethylated and methylated signal intensities in GSE-linked supplementary file). The beta value was calculated as: (signal b)/(signal a + signal b + 100)	485497	62	GPL13534	DONE	7	7
+Adrenoleukodystrophy	GSE34309	OK	WebArray software was used to generate log2-transformed gene expression values using the RMA algorithm	22277	18	GPL571	DONE	7	8
+Amyotrophic Lateral Sclerosis (ALS)	GSE3307	quantile normalized (separated motor and frontal cortex)	MAS5.0	22283	121	GPL96	DONE	7	9
+Amyotrophic Lateral Sclerosis (ALS)	GSE33855	OK	The Partek Genomics Suite was used to normalize (by GC RMA) and then analyse the microarray data following Affymetrix guidelines. Core probesets only were used.	232479	19	GPL5188	DONE	7	10
+Amyotrophic Lateral Sclerosis (ALS)	GSE56808	quantile normalized (separated motor and frontal cortex)	The data were analyzed with Microarray Suite version 5.0 (MAS 5.0) using Affymetrix default analysis settings and global scaling as normalization method. The trimmed mean target intensity of each array was arbitrarily set to 100	54675	18	GPL570	DONE	8	1
+Amyotrophic Lateral Sclerosis (ALS)	GSE28253	OK	Conversion of raw data .txt files to .mev files, data normalization and filtering using the TM4 (MIDAS pipeline) were performed by the PI Jean-Luc Mougeot. Raw data .txt files in Agilent format were converted to .mev files using ExpressConverterTM v2.1 of the TM4 Microarray Suite (TIGR Genomics, Rockville, CA). Background-subtracted raw data were normalized using the MIDAS pipeline (TM4, TIGR Genomics, Rockville, MD) according to Sioson et al. (2006) [PMID: 16626497] with the following steps: total intensity normalization, LocFit (LOWESS), standard deviation regularization and low intensity trim. We generated two datasets for further analysis, DS3500 and DS7000 where both Cy3 and Cy5 integrated intensities (ISI) were above one (ISI=3500) or two (ISI=7000) standard deviation(s) of their respective background.	45015	22	GPL4133	DONE	8	2
+Amyotrophic Lateral Sclerosis (ALS)	GSE18920	OK	Data were processed using Partek Genomics Suite version 6.4.  RMA background correction and quantile normalization were performed, and probeset summarization used the median polish method (RMA default setting in Partek).  Core probesets were used for the analysis.  For alternative splicing analysis, probe sets with maximum signal <3 and differential expression p-values > 0.5 were excluded.	228871	44	GPL5188	DONE	8	3
+Amyotrophic Lateral Sclerosis (ALS)	GSE4595	quantile normalized (separated motor and frontal cortex)	No normalization	41675	20	GPL1708	DONE	8	4
+Rheumatoid Arthritis	GSE12051	OK	Log2 transformation of BeadStudio raw data, gene filtering of Beadchip version2 RefSeq valid probes, quantile normalization using R	17454	44	GPL2507		8	5
+Rheumatoid Arthritis	GSE1919							8	6
+Rheumatoid Arthritis	GSE1402							8	7
+Rheumatoid Arthritis	GSE48006							8	8
+Rheumatoid Arthritis	GSE55468							8	9
+Rheumatoid Arthritis	GSE48780							8	10
+Rheumatoid Arthritis	GSE55457							9	1
+Rheumatoid Arthritis	GSE55584							9	2
+Rheumatoid Arthritis	GSE55235							9	3
+Rheumatoid Arthritis	GSE50646							9	4
+Rheumatoid Arthritis	GSE49604							9	5
+Rheumatoid Arthritis	GSE42296							9	6
+Rheumatoid Arthritis	GSE45536							9	7
+Rheumatoid Arthritis	GSE39340							9	8
+Rheumatoid Arthritis	GSE39428							9	9
+Rheumatoid Arthritis	GSE36700							9	10
+Rheumatoid Arthritis	GSE29746							10	1
+Rheumatoid Arthritis	GSE27390							10	2
+Rheumatoid Arthritis	GSE22956							10	3
+Rheumatoid Arthritis	GSE17755							10	4
+Rheumatoid Arthritis	GSE22108							10	5
+Rheumatoid Arthritis	GSE15258							10	6
+Rheumatoid Arthritis	GSE12653							10	7
+Rheumatoid Arthritis	GSE15573							10	8
+Rheumatoid Arthritis	GSE13026							10	9
+Rheumatoid Arthritis	GSE12021							10	10
+Rheumatoid Arthritis	GSE9027							11	1
+Rheumatoid Arthritis	GSE3698							11	2
+Rheumatoid Arthritis	GSE3824							11	3
+Rheumatoid Arthritis	GSE1919							11	4
+Rheumatoid Arthritis	GSE1402							11	5
+Behcet's Disease	GSE17114	OK	Affymetrix CEL files were analyzed together with their respective CDF (chip description file) file (HG-U133_Plus_2.cdf) on the Partek software (Partek Incorporated, USA). The background correction, normalization and summarization of the CEL files were deriveed using the robust multi-chip average (RMA) algorithm (with default settings of the Partek software: only perfect match values, derives quantile normalization across all the chips, and applies a log2 transformation to the intensities). Partek software was used to derive the adjusted data (ie.the expression value after correction for scan date, geographical origin, and immunosuppression status) in CORRECTED column.	54675	29	GPL570	DONE	11	6
+Brain Aneurysm	GSE36791	OK	The data were normalised using quantile normalisation with beadarray package in R	47231	61	GPL10558	DONE	11	7
+Brain Aneurysm	GSE13353	OK	GeneSpring implementation of RMA algorithm was used for background correction, normalization across arrays, and summarizing probe values	54675	19	GPL570	DONE	11	8
+Brain Aneurysm	GSE15629	OK	Data was normalized by dChip 2008 (quantile normalization, PM only)	33252	19	GPL6244	DONE	11	9
+Lobar Degeneration	GSE13162	quantile normalized	RMA	22277	56	GPL571	DONE	11	10
+Cerebral Palsy	GSE31243	OK	GeneSpring Software (Affymetrix, version 11.5) was used for primary analysis.  Genes were denoted as present if they had a MAS5 present call on 10/40 chips.  The concordance of 3 summarization algorithms were used: MAS5, RMA, and GC-RMA.  Significantly altered genes were determined by a 2x2 ANOVA within GeneSpring on patient group (cerebral palsy or control patients) and muscle (gracilis or semitendinosus) with a False Discovery Rate set at 1%.  This analysis was performed on each of the three summarization algorithms and the overlap of all 3 was used as the significantly different gene set. The RMA and GCRMA in log2 format values are linked to the Series record. 	22277	40	GPL571	DONE	12	1
+Craniosynostosis	GSE50796	OK	The data were normalized using quantile normalization in GenomeStudio and then exported in text format followed by upload to Partek Genomics Suite for statistical analysis 	24526	18	GPL6883	DONE	12	2
+Craniosynostosis	GSE27976	OK	Affymetrix Expression Console software, RMA normalization log2	333297	249	GPL6244	DONE	12	3
+Cytomegalovirus Infection	GSE50938	OK	Feature intensity was extracted by GeneChip Operating System as CEL files. The probe-level analysis of the CEL files was done by the RMA algorithm using GeneSpring GX11 program. No further adjustments were made to the data in the table.	54675	16	GPL570	DONE	12	4
+Cytomegalovirus Infection	GSE24434	OK	The Robust Multi-Array Average (RMA) algorithm was used for creation of the summarized probe intensity signals, and data files were generated by the Affymetrix GeneChip Operating 1.4 Software	28869	18	GPL444625	DONE	12	5
+Cytomegalovirus Infection	GSE14490	OK	The raw data were normalized and scaled with lowess algorithm	45015	20	GPL4133	DONE	12	6
+Dermatomyositis	GSE11971							12	7
+Dermatomyositis	GSE48280							12	8
+Dermatomyositis	GSE46239							12	9
+Dermatomyositis	GSE32245							12	10
+Dermatomyositis	GSE11083							13	1
+Dermatomyositis	GSE3307							13	2
+Dermatomyositis	GSE1551							13	3
+Dermatomyositis	GSE493							13	4
+Diabetic Neuropathy	GSE24290							13	5
+AIDS	GSE30536							13	6
+AIDS	GSE28160							13	7
+AIDS	GSE30310							13	8
+AIDS	GSE6740							13	9
+AIDS	GSE3489							13	10
+AIDS	GSE511							14	1
+AIDS	GSE56848							14	2
+AIDS	GSE39941							14	3
+AIDS	GSE38556							14	4
+AIDS	GSE41952							14	5
+AIDS	GSE33580							14	6
+AIDS	GSE35864							14	7
+AIDS	GSE30536							14	8
+AIDS	GSE33514							14	9
+AIDS	GSE24064							14	10
+AIDS	GSE24411							15	1
+AIDS	GSE3489							15	2
+AIDS	GSE511							15	3
+Brain Tumor	GSE34824							15	4
+Brain Tumor	GSE37418							15	5
+Brain Tumor	GSE36245							15	6
+Brain Tumor	GSE15824							15	7
+Brain Tumor	GSE34771							15	8
+Brain Tumor	GSE468	metastatic vs non metastatic						15	9
+Brain Tumor	GSE49822							15	10
+Brain Tumor	GSE50024							16	1
+Brain Tumor	GSE50022							16	2
+Brain Tumor	GSE50021							16	3
+Brain Tumor	GSE38142							16	4
+Brain Tumor	GSE52009							16	5
+Brain Tumor	GSE50161							16	6
+Brain Tumor	GSE31262							16	7
+Brain Tumor	GSE42656							16	8
+Brain Tumor	GSE44971							16	9
+Brain Tumor	GSE44684							16	10
+Brain Tumor	GSE39182							17	1
+Brain Tumor	GSE35493							17	2
+Brain Tumor	GSE36278							17	3
+Brain Tumor	GSE25631							17	4
+Brain Tumor	GSE37418							17	5
+Brain Tumor	GSE31545							17	6
+Brain Tumor	GSE34258							17	7
+Brain Tumor	GSE34355							17	8
+Brain Tumor	GSE31095							17	9
+Brain Tumor	GSE15824							17	10
+Brain Tumor	GSE26966							18	1
+Brain Tumor	GSE25604							18	2
+Brain Tumor	GSE16583							18	3
+Brain Tumor	GSE22692							18	4
+Brain Tumor	GSE22615							18	5
+Brain Tumor	GSE19720							18	6
+Brain Tumor	GSE20395							18	7
+Brain Tumor	GSE16581							18	8
+Brain Tumor	GSE19391							18	9
+Brain Tumor	GSE14098							18	10
+Brain Tumor	GSE20018							19	1
+Brain Tumor	GSE14295							19	2
+Brain Tumor	GSE14087							19	3
+Brain Tumor	GSE18015							19	4
+Brain Tumor	GSE11822							19	5
+Brain Tumor	GSE10878							19	6
+Brain Tumor	GSE2223							19	7
+Brain Tumor	GSE468							19	8
+Brain Tumor	GSE4290							19	9
+Brain Tumor	GSE4271							19	10
+Brain Tumor	GSE4058							20	1
+Epilepsy	GSE28674							20	2
+Epilepsy	GSE7486							20	3
+Epilepsy	GSE29796							20	4
+Epilepsy	GSE34099							20	5
+Epilepsy	GSE20977							20	6
+Chron's Disease	GSE20881							20	7
+Chron's Disease	GSE17594							20	8
+Familial Dysautonomia	GSE17043							20	9
+Familial Hemangioma	GSE34989							20	10
+Friedreich's Ataxia	GSE30933							21	1
+Friedreich's Ataxia	GSE22651							21	2
+Friedreich's Ataxia	GSE11204							21	3
+Friedreich's Ataxia	GSE5040							21	4
+Gaucher Disease	GSE21899							21	5
+Guillain-Barré Syndrome	GSE31014							21	6
+Hereditary Spastic Paraplegia	GSE3307							21	7
+HTLV-1 Associated Myelopathy	GSE34572							21	8
+HTLV-1 Associated Myelopathy	GSE29332							21	9
+HTLV-1 Associated Myelopathy	GSE29312							21	10
+HTLV-1 Associated Myelopathy	GSE19080							22	1
+Huntington's Disease	GSE8762							22	2
+Huntington's Disease	GSE1767							22	3
+Huntington's Disease	GSE1751							22	4
+Huntington's Disease	GSE34721							22	5
+Huntington's Disease	GSE34201							22	6
+Huntington's Disease	GSE37547							22	7
+Huntington's Disease	GSE26927							22	8
+Huntington's Disease	GSE8762							22	9
+Huntington's Disease	GSE1751							22	10
+Huntington's Disease	GSE1767							23	1
+Hypercortisolism (Cushing's)	GSE30159							23	2
+Hypercortisolism (Cushing's)	GSE4060							23	3
+Hypercortisolism (Cushing's)	GSE8514							23	4
+Leukodystrophy	GSE23350							23	5
+Lupus	GSE46907							23	6
+Lupus	GSE51997							23	7
+Lupus	GSE52471							23	8
+Lupus	GSE51100							23	9
+Lupus	GSE27293							23	10
+Lupus	GSE42648							24	1
+Lupus	GSE26768							24	2
+Lupus	GSE32591							24	3
+Lupus	GSE38567							24	4
+Lupus	GSE37573							24	5
+Lupus	GSE21384							24	6
+Lupus	GSE30153							24	7
+Lupus	GSE39928							24	8
+Lupus	GSE27895							24	9
+Lupus	GSE23203							24	10
+Lupus	GSE26975							25	1
+Lupus	GSE27427							25	2
+Lupus	GSE20864							25	3
+Lupus	GSE17755							25	4
+Lupus	GSE22098							25	5
+Lupus	GSE12374							25	6
+Lupus	GSE13887							25	7
+Lupus	GSE11909							25	8
+Lupus	GSE10325							25	9
+Lupus	GSE19033							25	10
+Lyme Disease	GSE55815							26	1
+Lyme Disease	GSE27252							26	2
+Lyme Disease	GSE27995							26	3
+Meningitis	GSE40586							26	4
+Metachromatic Leukodystrophy	GSE23350							26	5
+Multiple Sclerosis	GSE16461							26	6
+Multiple Sclerosis	GSE21942							26	7
+Multiple Sclerosis	GSE52139							26	8
+Multiple Sclerosis	GSE40360							26	9
+Multiple Sclerosis	GSE43591							26	10
+Multiple Sclerosis	GSE43590							27	1
+Multiple Sclerosis	GSE41849							27	2
+Multiple Sclerosis	GSE41848							27	3
+Multiple Sclerosis	GSE41847							27	4
+Multiple Sclerosis	GSE41846							27	5
+Multiple Sclerosis	GSE41890							27	6
+Multiple Sclerosis	GSE39643							27	7
+Multiple Sclerosis	GSE32915							27	8
+Multiple Sclerosis	GSE21942							27	9
+Multiple Sclerosis	GSE26927							27	10
+Multiple Sclerosis	GSE16461							28	1
+Multiple Sclerosis	GSE26104							28	2
+Multiple Sclerosis	GSE21079							28	3
+Multiple Sclerosis	GSE17048							28	4
+Multiple Sclerosis	GSE20334							28	5
+Multiple Sclerosis	GSE14895							28	6
+Multiple Sclerosis	GSE17393							28	7
+Multiple Sclerosis	GSE17410							28	8
+Multiple Sclerosis	GSE17846							28	9
+Multiple Sclerosis	GSE15245							28	10
+Multiple Sclerosis	GSE13732							29	1
+Muscular Dystrophy	GSE36398							29	2
+Muscular Dystrophy	GSE11681							29	3
+Muscular Dystrophy	GSE6011							29	4
+Muscular Dystrophy	GSE3307							29	5
+Muscular Dystrophy	GSE1007							29	6
+Muscular Dystrophy	GSE1004							29	7
+Muscular Dystrophy	GSE465							29	8
+Muscular Dystrophy	GSE36398							29	9
+Muscular Dystrophy	GSE26852							29	10
+Muscular Dystrophy	GSE33799							30	1
+Muscular Dystrophy	GSE32720							30	2
+Muscular Dystrophy	GSE9397							30	3
+Muscular Dystrophy	GSE6011							30	4
+Neurofibromatosis	GSE39764							30	5
+Neurofibromatosis	GSE24328							30	6
+Neurofibromatosis	GSE19370							30	7
+Neurofibromatosis	GSE18444							30	8
+Neurofibromatosis	GSE14038							30	9
+Neuronal Ceroid Lipofuscinosis	GSE22225							30	10
+Parkinson's Disease	GSE33298							31	1
+Parkinson's Disease	GSE19587							31	2
+Parkinson's Disease	GSE8397							31	3
+Parkinson's Disease	GSE7621							31	4
+Parkinson's Disease	GSE6613							31	5
+Parkinson's Disease	GSE34287							31	6
+Parkinson's Disease	GSE33298							31	7
+Parkinson's Disease	GSE22491							31	8
+Parkinson's Disease	GSE29654							31	9
+Parkinson's Disease	GSE32037	Are these a series?						31	10
+Parkinson's Disease	GSE32040							32	1
+Parkinson's Disease	GSE32039							32	2
+Parkinson's Disease	GSE23290							32	3
+Parkinson's Disease	GSE28894							32	4
+Parkinson's Disease	GSE26927							32	5
+Parkinson's Disease	GSE20163							32	6
+Parkinson's Disease	GSE20159							32	7
+Parkinson's Disease	GSE24378							32	8
+Parkinson's Disease	GSE21450							32	9
+Parkinson's Disease	GSE19587							32	10
+Parkinson's Disease	GSE15826							33	1
+Parkinson's Disease	GSE20295							33	2
+Parkinson's Disease	GSE20292							33	3
+Parkinson's Disease	GSE20153							33	4
+Parkinson's Disease	GSE20146							33	5
+Parkinson's Disease	GSE20141							33	6
+Parkinson's Disease	GSE20168							33	7
+Parkinson's Disease	GSE18838							33	8
+Parkinson's Disease	GSE8397							33	9
+Parkinson's Disease	GSE7621							33	10
+Parkinson's Disease	GSE6613							34	1
+Parkinson's Disease	GSE4773							34	2
+Pompe Disease	GSE38680							34	3
+Progressive Supranuclear Palsy	GSE53740							34	4
+Progressive Supranuclear Palsy	GSE32037							34	5
+Progressive Supranuclear Palsy	GSE32040							34	6
+Progressive Supranuclear Palsy	GSE32039							34	7
+Rett Syndrome	GSE51607							34	8
+Rett Syndrome	GSE34099							34	9
+Salivary Gland Disease	GSE23117							34	10
+Salivary Gland Disease	GSE51092							35	1
+Salivary Gland Disease	GSE48278							35	2
+Salivary Gland Disease	GSE40611							35	3
+Salivary Gland Disease	GSE23117							35	4
+Salivary Gland Disease	GSE7451							35	5
+Soto's Syndrome	GSE27200							35	6
+Spinal Muscular Atrophy	GSE27207							35	7
+Spinal Muscular Atrophy	GSE8359							35	8
+Stroke	GSE47728							35	9
+Stroke	GSE47727							35	10
+Stroke	GSE22255							36	1
+Stroke	GSE16561							36	2
+Tuberous Sclerosis	GSE12027							36	3
+William's Syndrome	GSE16715							36	4
+William's Syndrome	GSE47390							36	5
+William's Syndrome	GSE16715							36	6
